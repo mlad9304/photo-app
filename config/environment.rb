@@ -5,8 +5,8 @@ require_relative 'application'
 Rails.application.initialize!
 
 ActionMailer::Base.smtp_settings = {
-    :user_name => 'rails-photo-app-sendgrid-api-key',
-    :password => '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',
+    :user_name => ENV['SENDGRID_USERNAME'],
+    :password => ENV['SENDGRID_PASSWORD'],
     :domain => 'yourdomain.com',
     :address => 'smtp.sendgrid.net',
     :port => 587,
