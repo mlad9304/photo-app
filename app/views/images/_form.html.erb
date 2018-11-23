@@ -39,3 +39,11 @@
   </div>
 
 <% end %>
+
+<script type="text/javascript">
+  $('#image-picture').bind('change', function() {
+    var size_in_megabites = this.files[0].size/1024/1024;
+    if(size_in_megabites > 5)
+      alert('Maximum file size is 5MB.')
+  })
+</script>
